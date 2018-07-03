@@ -1,0 +1,12 @@
+C++ program file for hash-table is added
+
+INPUT
+It ask for number of words you want to encrypt and then you can enter that number of words to encrypt.
+
+OUTPUT
+Each bucket with its contents is shown.
+
+IMPLEMENTATION
+Hash table is implemnted using array and linked list, i.e. array of linked-list.
+Hashing is done by first taking sum of ASCII value of each charater of the word and then taking modulo of this sum.
+Number of buckets can be changed by changing value of 'hashingDivisor' in code
