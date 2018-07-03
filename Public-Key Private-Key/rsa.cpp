@@ -6,7 +6,7 @@ using namespace std;
 
 //double e=4;
 
-ll p,q,e,n;
+ll p,q,e,n,d;
 
 string convertToString(ll num)
 {
@@ -73,6 +73,15 @@ ll modulo(ll a, ll b, ll n){
     return x % n;
 }
 
+pair<ll,ll> getPublicKey()
+{
+    return make_pair(n,e);
+}
+
+ll getPrivateKey()
+{
+    return d;
+}
 ll encrypt(string s)
 {
     srand(time(0));
@@ -119,7 +128,7 @@ string decrypt(ll num)
     //ll fhi=(p-1)*(q-1);
     //ll d=(2*fhi+1)/e;
     //num=1394;
-    int d=modInverse(e,(p-1)*(q-1));
+    d=modInverse(e,(p-1)*(q-1));
 
     ll ans=modulo(num,d,n);
     //cout<<"ans="<<ans<<endl;

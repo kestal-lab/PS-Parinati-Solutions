@@ -8,10 +8,15 @@ int main() {
 
 
     ll encryptedString=encrypt(s);
-    cout<<"Encrypted String is: "<<encryptedString<<endl;
+    cout<<endl<<"Encrypted String is: "<<encryptedString<<endl;
 
     string decryptedString=decrypt(encryptedString);
     cout<<endl<<"Decrypted String is: "<<decryptedString<<endl;
+
+
+    cout<<endl<<"Public Key is made up of n= "<<getPublicKey().first<<" and e= "<<getPublicKey().second<<endl;
+
+    cout<<endl<<"Private Key used is: "<<getPrivateKey()<<endl;
 
     return 0;
 }
